@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700&family=Josefin+Sans:wght@300;400;600&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Outfit:wght@300;400;600;700&family=Overpass:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Josefin Sans;
+    /* overflow-x: hidden; */
+}
+:root{
+    --ds-red:hsl(0, 36%, 70%);
+    --soft-red:hsl(0, 93%, 68%);
+    --dark-gray:hsl(0, 6%, 24%);
+}
+article{
+    min-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    font-size: 16px;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-size: cover;
+}
+.article-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.article{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+#p-txt{
+    font-size: 16px;
+    width: 60%;
+    color: var(--soft-red);
+    font-weight: 600;
+    line-height: 1.8rem;
+}
+.article, .article-logo{
+    padding: 3.5rem 6rem 5rem 8rem;
+}
+#big-text{
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 4.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+}
+#big-text b{
+    font-weight: 300;
+    color: var(--soft-red);
+}
+.article-logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#hero-desktop{
+    height: 100%;
+    padding: 0;
+}
+.disable-img{
+    display: none;
+}
+#email-form{
+    position: relative;
+}
+#email-input input{
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+#email-input{
+    padding: 1rem 2rem;
+    border: 2px solid var(--ds-red);
+    outline: none;
+    border-radius: 30px;
+    width: 60%;
+}
+#submit-btn {
+    background-color: var(--ds-red);
+    border: none;
+    padding: 0.8rem 2.7rem;
+    left:50%;
+
+    position: absolute;
+    border-radius: 40px;
+    transition: all 200ms ease-in;
+}
+#submit-btn:hover{
+    background-color: var(--soft-red);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#error-logo{
+    /* display: none; */
+    position: absolute;
+    left: 45%;
+    transform: translateY(50%);
+    transition: all 200ms ease;
+}
+#error-txt{
+    /* display: none; */
+    position:absolute;
+    font-size: 14px;
+    color: var(--soft-red);
+    font-weight: 600;
+    margin-top: 0.5rem;
+    left: 5%;
+    transition: 300ms ease-out;
+}
+
+.disable{
+    display: none;
+}
+
+
+@media only screen and (min-width:1400px){
+    #hero-desktop {
+        width: 725px;
+    }
+    #submit-btn{
+        left: 50%;
+        padding: 0.85rem 2.7rem;
+    }  
+    #error-logo{
+
+        position: absolute;
+        left: 45%;
+    } 
+    .article, .article-logo{
+        padding: 3.5rem 6rem 0rem 8rem;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .article-content{
+        flex-direction: column;
+        padding: 0;
+    }
+    .article-img{
+        margin-top: 8rem;
+    }
+    .article-img img{
+        width: 100%;
+    }
+    .article{
+        padding: 3rem 1rem;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #big-tex, #p-txt{
+        text-align: center;
+    }
+    
+}
+
+@media only screen and (max-width:400px){
+    .article-content{
+        flex-direction: column;
+        padding: 0;
+    }
+    .disable-desktop{
+        display: none;
+    }
+    #hero-mobile{
+        display: block;
+        width: 100%;
+    }
+    .article{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        padding: 3.5rem 1.5rem;
+        gap: 1.5rem;
+    }
+    #big-text{
+        font-size: 2.3rem;
+        line-height: normal;
+        font-weight: 600;
+        text-align: center;
+    }
+    #p-txt{
+        width: 100%;
+        font-size: 16px;
+        text-align: center;
+    }
+    .article-img{
+        margin-top: 6rem;
+    }
+    .article-logo{
+        padding: 0 0 0 1.5rem;
+        top: 3.5%;
+    }
+    .article-logo img{
+        width: 128px;
+    }
+    #email-input{
+        width: 20rem;
+    }
+    #submit-btn{
+        top:0;
+        left: 76%;
+        padding: 0.8rem 2rem;    
+        color: var(--ds-red);    
+    }
+    #error-logo{
+        top:0;
+        left: 65%;
+    }
+    
+}
